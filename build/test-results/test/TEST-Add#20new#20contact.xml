@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Add new contact" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-13T20:26:35" hostname="DESKTOP-62VSDD3" time="7.285">
+  <properties/>
+  <testcase name="Add new contact" classname="Add new contact" time="7.285"/>
+  <system-out><![CDATA[
+@addContact
+Scenario Outline: Add new contact   ?[90m# src/test/resources/features/addNewContact.feature:17?[0m
+  ?[32mGiven ?[0m?[32mNavigate to Page Phone Book?[0m ?[90m# steps.LoginSteps.navigateToLoginPage()?[0m
+  ?[32mWhen ?[0m?[32mClick on Login Tab?[0m           ?[90m# steps.LoginSteps.clickOnLoginTab()?[0m
+  ?[32mAnd ?[0m?[32mEnter the Valid Data?[0m          ?[90m# steps.LoginSteps.enterValidData()?[0m
+  ?[32mAnd ?[0m?[32mClick on Login button?[0m         ?[90m# steps.LoginSteps.clickOnLoginButton()?[0m
+  ?[32mThen ?[0m?[32mClick on Add Tab?[0m             ?[90m# steps.LoginSteps.clickOnAddButton()?[0m
+  ?[32mThen ?[0m?[32mEnter new contact data?[0m       ?[90m# steps.LoginSteps.enterNewContactData(io.cucumber.datatable.DataTable)?[0m
+    | Name    | LastName | Phone      | email                | Address                    | description |
+    | Janluka | Poljuka  | +521562598 | janlukapol@gmail.com | Turin, Italy,fibbonachi 34 | goalkeeper  |
+  ?[32mAnd ?[0m?[32mClick on Save button?[0m          ?[90m# steps.LoginSteps.clickOnSaveButton()?[0m
+  ?[32mThen ?[0m?[32mAssert contact appears?[0m       ?[90m# steps.LoginSteps.newContactAppears()?[0m
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 13545
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1668371198.347][WARNING]: This version of ChromeDriver has not been tested with Chrome version 107.
+????. 13, 2022 9:26:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
